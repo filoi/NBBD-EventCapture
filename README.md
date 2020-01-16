@@ -1,2 +1,2 @@
-# NBBD-EventCapture
-Repository for NBBD app for changes done in event capture
+# event-capture-app
+DHIS2 Event Capture App
