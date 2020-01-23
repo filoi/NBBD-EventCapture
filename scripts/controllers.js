@@ -233,7 +233,14 @@ var eventCaptureControllers = angular.module('eventCaptureControllers', ['ngCsv'
     $scope.generateCode = function(de) {
         var orgUnitName = myTrim($scope.selectedOrgUnit.displayName);
         var list = $scope.dhis2Events.length;
-        if(!$scope.currentEvent[de.id] && !$scope.dhis2Events.includes($scope.currentEvent)){
+        var isNewEvent = true;
+        for(var i=0; i<$scope.dhis2Events.length; i++){
+            if($scope.dhis2Events[i].event === $scope.currentEvent.event){
+                isNewEvent = false;
+                break;
+            }
+        }
+        if(isNewEvent){
         var d = new Date();
         var year = d.getFullYear();
         OrgUnitFactory.getFromStoreOrServer($scope.selectedOrgUnit.id).then(function (orgUnitFromStore) {
@@ -253,10 +260,7 @@ var eventCaptureControllers = angular.module('eventCaptureControllers', ['ngCsv'
         });
             $scope.currentEvent[de.id] = codeName;
         }
-        else{
-            $scope.currentEvent[de.id] = '';
-        }
-        return codeName;
+        return true;
     }
 
     function getOrgUnitCode(uid){

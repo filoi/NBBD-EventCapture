@@ -1370,6 +1370,7 @@
                                         <span ng-if="prStDes[de.id].renderOptionsAsRadio && optionSets[prStDes[de.id].dataElement.optionSet.id].options.length < 7">
                                         <d2-radio id="de.id"
                                                   d2-name="foo"
+                                                  d2-model-id="de.id"
                                                   d2-object="currentEvent"
                                                   d2-options="optionSets[prStDes[de.id].dataElement.optionSet.id].options"
                                                   d2-option-filter="optionVisibility"
@@ -1408,34 +1409,34 @@
                                         <button    style="color:red" ng-show="de.id=='R0M1X9tnmQu'"  ng-click="selectimage('R0M1X9tnmQu','H38uvKSWnU8')" id="houseid">
                                             <i class="fa fa-search-plus"></i>
                                         </button>
-                                        <div style="width: 67px;height: 32px;" ng-show="de.id=='ZubX7PYEvBc'"> <!--<button    style="color:red"    id="houseid"  ng-click="">
+                                        <div style="width: 67px;height: 32px;" ng-show="de.id === 'ZubX7PYEvBc'"> <!--<button    style="color:red"    id="houseid"  ng-click="">
                                     <i class="fa fa-search-plus"></i>
                                   </button>--></div>
-                                        <div style="width: 67px;height: 32px;" ng-show="de.id=='HLooj8fIQ9W'"><!-- <button    style="color:red"  ng-show="de.id==''"  id="houseid"  ng-click="">
+                                        <div style="width: 67px;height: 32px;" ng-show="de.id === 'HLooj8fIQ9W'"><!-- <button    style="color:red"  ng-show="de.id==''"  id="houseid"  ng-click="">
                                      <i class="fa fa-search-plus"></i>
                                   </button>--></div>
-                                        <div style="width: 67px;height: 32px;" ng-show="de.id=='mv71hPdfUBU'"><!-- <button   style="color:red"   ng-show="de.id==''"  id="houseid"  ng-click=">
+                                        <div style="width: 67px;height: 32px;" ng-show="de.id === 'mv71hPdfUBU'"><!-- <button   style="color:red"   ng-show="de.id==''"  id="houseid"  ng-click=">
                                     <i class="fa fa-search-plus"></i>
                                   </button>--></div>
-                                        <div style="width: 67px;height: 32px;" ng-show="de.id=='lRPtWVIT23w'"><!-- <button    style="color:red"  ng-show="de.id==''"  id="houseid"  ng-click="">
+                                        <div style="width: 67px;height: 32px;" ng-show="de.id === 'lRPtWVIT23w'"><!-- <button    style="color:red"  ng-show="de.id==''"  id="houseid"  ng-click="">
                                     <i class="fa fa-search-plus"></i>
                                   </button>--></div>
-                                        <div style="width: 67px;height: 32px;" ng-show="de.id=='XzK29eZXJJi'"><!-- <button    style="color:red"  ng-show="de.id==''"  id="houseid"  ng-click="">
+                                        <div style="width: 67px;height: 32px;" ng-show="de.id === 'XzK29eZXJJi'"><!-- <button    style="color:red"  ng-show="de.id==''"  id="houseid"  ng-click="">
                                      <i class="fa fa-search-plus"></i>
                                   </button>--></div>
-                                        <div style="width: 67px;height: 32px;" ng-show="de.id=='F8H6wPsXsjD'"><!-- <button    style="color:red"  ng-show="de.id==''"  id="houseid"  ng-click="">
+                                        <div style="width: 67px;height: 32px;" ng-show="de.id === 'F8H6wPsXsjD'"><!-- <button    style="color:red"  ng-show="de.id==''"  id="houseid"  ng-click="">
                                      <i class="fa fa-search-plus"></i>
                                   </button>--></div>
-                                        <div style="width: 67px;height: 32px;" ng-show="de.id=='WIkblichjKu'"> <!--<button    style="color:red"  ng-show="de.id==''"  id="houseid"  ng-click="">
+                                        <div style="width: 67px;height: 32px;" ng-show="de.id === 'WIkblichjKu'"> <!--<button    style="color:red"  ng-show="de.id==''"  id="houseid"  ng-click="">
                                     <i class="fa fa-search-plus"></i>
                                   </button>--></div>
-                                        <div style="width: 67px;height: 32px;" ng-show="de.id=='iEZWuk4NQGM'"> <!--<button    style="color:red"  ng-show="de.id==''"  id="houseid"  ng-click="">
+                                        <div style="width: 67px;height: 32px;" ng-show="de.id === 'iEZWuk4NQGM'"> <!--<button    style="color:red"  ng-show="de.id==''"  id="houseid"  ng-click="">
                                     <i class="fa fa-search-plus"></i>
                                   </button>--></div>
-                                        <div style="width: 67px;height: 32px;" ng-show="de.id=='jQ6M4dgf4Nu'"><!-- <button   style="color:red"   ng-show="de.id==''"  id="houseid"  ng-click="">
+                                        <div style="width: 67px;height: 32px;" ng-show="de.id === 'jQ6M4dgf4Nu'"><!-- <button   style="color:red"   ng-show="de.id==''"  id="houseid"  ng-click="">
                                     <i class="fa fa-search-plus"></i>
                                   </button>--></div>
-                                        <div style="width: 67px;height: 32px;" ng-show="de.id=='ius0J2qhIjF'"> <!--<button   style="color:red"   ng-show="de.id==''"  id="houseid"  ng-click="">
+                                        <div style="width: 67px;height: 32px;" ng-show="de.id === 'ius0J2qhIjF'"> <!--<button   style="color:red"   ng-show="de.id==''"  id="houseid"  ng-click="">
                                      <i class="fa fa-search-plus"></i>
                                   </button>--></div>
                                     </div>
@@ -1756,6 +1757,15 @@
             <div ng-if="section.description!=='Birth Defect'">
                 <div class="vertical-spacing section-label">
                     {{section.displayName}}
+                <span ng-if="section.id == 'fxLbQSLIPA8'">
+                    <a href="./image-picker/SB-M-MaternalCondition.pdf" target="_blank"><img src="../images/pdf.png"/></a>
+                </span>
+                <span ng-if="section.id == 'n5dKd74o5bq'">
+                    <a href="./image-picker/SB-A-AntepartumDeaths.pdf" target="_blank"><img src="../images/pdf.png"/></a>
+                </span>
+                <span ng-if="section.id == 'aglkBT8XpCQ'">
+                    <a href="./image-picker/SB-I-IntrapartumDeaths.pdf" target="_blank"><img src="../images/pdf.png"/></a>
+                </span>
                 </div>
                 <div class="alert alert-info" ng-if="section.description">
                     {{section.description}}
@@ -1906,15 +1916,29 @@
                                                class="form-control"/>
                                     </div>
                                     <div ng-switch-when="TEXT">
-                                        <input type="text"
-                                               ng-model="currentEvent[de.id]"
-                                               ng-required="prStDes[de.id].compulsory || mandatoryFields[de.id]"
-                                               ng-disabled="!dataElementEditable(de)"
-                                               name="foo"
-                                               input-field-id={{de.id}}
-                                               ng-blur="saveDatavalue()"
-                                               class="form-control"/>
-
+                                        <div ng-switch on="prStDes[de.id].dataElement.code">
+                                            <div ng-switch-when="EV150120">
+                                                <input type="text"
+                                                       ng-model="currentEvent[de.id]"
+                                                       ng-value=""
+                                                       ng-required="prStDes[de.id].compulsory || mandatoryFields[de.id]"
+                                                       ng-disabled="generateCode(de)"
+                                                       name="foo"
+                                                       input-field-id={{de.id}}
+                                                       ng-mouseover="saveDatavalue()"
+                                                       class="form-control"/>
+                                            </div>
+                                            <div ng-switch-default>
+                                                <input type="text"
+                                                       ng-model="currentEvent[de.id]"
+                                                       ng-required="prStDes[de.id].compulsory || mandatoryFields[de.id]"
+                                                       ng-disabled="!dataElementEditable(de)"
+                                                       name="foo"
+                                                       input-field-id={{de.id}}
+                                                       ng-blur="saveDatavalue()"
+                                                       class="form-control"/>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div ng-switch-when="LONG_TEXT">
                                         <textarea rows="3"
